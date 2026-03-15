@@ -1,22 +1,24 @@
 # 🛡️ AI Face Attendance System with Anti-Spoofing
 
-A high-tech, biometric attendance system that uses computer vision to recognize faces while preventing fraud through real-time anti-spoofing detection.
+A professional biometric security application that uses deep learning to identify users while verifying they are "live" human beings, preventing photo-based fraud.
 
 ## 🌟 Features
-* **Live Face Recognition:** Identifies registered users in milliseconds.
-* **Anti-Spoofing:** Detects if a person is real or holding up a photo/screen.
-* **Biometric Security:** Converts faces into 128-bit digital signatures (embeddings).
-* **Automated Logging:** Records "In" and "Out" timestamps in a local ledger.
-* **Modern UI:** Built with Tkinter for a clean, user-friendly experience.
+* **Anti-Spoofing:** Blocks login attempts using photos or digital screens.
+* **Biometric Identity:** Translates facial features into 128-bit digital "signatures."
+* **Real-time UI:** Fluid 20ms update loop for the camera feed.
+* **Logging:** Automated entry/exit tracking in `log.txt`.
 
-## 🛠️ Tech Stack
-* **Language:** Python 3.10+
-* **Libraries:** OpenCV, Face_Recognition, TensorFlow, PIL, Tkinter.
-* **Models:** Dlib 68-point landmark predictor, Anti-spoofing Mini-Network.
+## 🚀 Prerequisites & Installation
 
-## 🚀 Getting Started
+To avoid the `ModuleNotFoundError` for `pkg_resources`, follow these steps exactly:
 
-### 1. Prerequisites
-Ensure you have Python installed, then install the required dependencies:
+### 1. Environment Setup
 ```bash
-pip install opencv-python face-recognition pillow setuptools
+# Install the compatibility bridge for face_recognition_models
+python -m pip install setuptools==69.5.1
+
+# Install core libraries
+pip install opencv-python pillow
+
+# Install face recognition suite
+pip install face-recognition face-recognition-models
